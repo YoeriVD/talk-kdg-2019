@@ -12,7 +12,7 @@ before_build:
   - nuget restore
 configuration: Release
 build:
-  project: "demo\\mvc-demo.sln"
+  project: mvc-demo.sln
   publish_nuget: false
   verbosity: normal
 max_jobs: 1
