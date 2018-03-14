@@ -1,0 +1,7 @@
+﻿@model mvc_demo.Controllers.AddTextModel
+
+@using (Html.BeginForm())
+{
+    @Html.EditorFor(m => m.Title)
+    @Html.TextAreaFor(m => m.Text, new{rows="20"})
+}

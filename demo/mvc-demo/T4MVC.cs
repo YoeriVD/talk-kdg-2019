@@ -29,6 +29,7 @@ public static partial class MVC
 {
     public static mvc_demo.Controllers.HomeController Home = new mvc_demo.Controllers.T4MVC_HomeController();
     public static mvc_demo.Controllers.SentimentController Sentiment = new mvc_demo.Controllers.T4MVC_SentimentController();
+    public static mvc_demo.Controllers.TextController Text = new mvc_demo.Controllers.T4MVC_TextController();
     public static T4MVC.SharedController Shared = new T4MVC.SharedController();
 }
 

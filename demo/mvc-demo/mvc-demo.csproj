@@ -123,6 +123,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TextController.cs" />
+    <Compile Include="Models\IndexSentimentViewModel.cs" />
+    <Compile Include="Models\MultiSelectFormDto.cs" />
+    <Compile Include="Models\Option.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -231,6 +235,8 @@
     <Content Include="Views\Sentiment\Index.cshtml" />
     <Content Include="Views\Home\DisplayTemplates\TextAnalysis.cshtml" />
     <Content Include="Views\Home\DisplayTemplates\Sentiment.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\MultiSelectFormDto.cshtml" />
+    <Content Include="Views\Text\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
