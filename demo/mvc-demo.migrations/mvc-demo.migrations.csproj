@@ -51,6 +51,10 @@
     <Compile Include="Migrations\201803142112097_InitialMigration.Designer.cs">
       <DependentUpon>201803142112097_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803142228519_Rename.cs" />
+    <Compile Include="Migrations\201803142228519_Rename.Designer.cs">
+      <DependentUpon>201803142228519_Rename.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -67,6 +71,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201803142112097_InitialMigration.resx">
       <DependentUpon>201803142112097_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803142228519_Rename.resx">
+      <DependentUpon>201803142228519_Rename.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

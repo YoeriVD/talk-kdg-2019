@@ -11,10 +11,10 @@
     </div>
     <div class="card-body" style="">
         <p class="card-text">
-            @Model.Preview.Substring(0, 140)
+            @(Model.TextContent?.Substring(0, 140))
         </p>
         <div class="d-flex flex-row-reverse">
-            @Html.ActionLink("Read", MVC.Sentiment.Index(), new {@class = "card-link"})
+            @Html.ActionLink("Read", MVC.Sentiment.Index(Model.Id), new {@class = "card-link"})
         </div>
     </div>
 
