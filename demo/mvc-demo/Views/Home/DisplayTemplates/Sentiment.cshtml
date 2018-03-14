@@ -1,5 +1,6 @@
-﻿@using mvc_demo.Models
-@model mvc_demo.Models.Sentiment
+﻿@using mvc_demo.core.Sentiments
+@using mvc_demo.Models
+@model Sentiment
 <span class="badge badge-pill badge-@emotionToPillColor(Model.EmotionKind)">@Model.EmotionName</span>
 
 @functions
