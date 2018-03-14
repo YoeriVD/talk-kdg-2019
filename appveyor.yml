@@ -2,10 +2,11 @@ version: 1.0.{build}
 os: Visual Studio 2017
 before_build:
   - nuget restore
+configuration: Release
 build:
   project: demo\mvc-demo.sln
   publish_nuget: false
-  verbosity: minimal
+  verbosity: normal
 max_jobs: 1
 skip_tags: true
 cache:
