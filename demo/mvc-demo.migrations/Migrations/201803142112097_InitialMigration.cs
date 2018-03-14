@@ -8,6 +8,16 @@ namespace mvc_demo.migrations.Migrations
         public override void Up()
         {
             CreateTable(
+                "dbo.Sentiments",
+                c => new
+                    {
+                        Id = c.Guid(nullable: false),
+                        EmotionName = c.String(),
+                        EmotionKind = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
                 "dbo.TextAnalysis",
                 c => new
                     {
@@ -18,26 +28,29 @@ namespace mvc_demo.migrations.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.Sentiments",
+                "dbo.TextAnalysisSentiments",
                 c => new
                     {
-                        Id = c.Guid(nullable: false),
-                        EmotionName = c.String(),
-                        EmotionKind = c.Int(nullable: false),
-                        TextAnalysis_Id = c.Guid(),
+                        TextAnalysis_Id = c.Guid(nullable: false),
+                        Sentiment_Id = c.Guid(nullable: false),
                     })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.TextAnalysis", t => t.TextAnalysis_Id)
-                .Index(t => t.TextAnalysis_Id);
+                .PrimaryKey(t => new { t.TextAnalysis_Id, t.Sentiment_Id })
+                .ForeignKey("dbo.TextAnalysis", t => t.TextAnalysis_Id, cascadeDelete: true)
+                .ForeignKey("dbo.Sentiments", t => t.Sentiment_Id, cascadeDelete: true)
+                .Index(t => t.TextAnalysis_Id)
+                .Index(t => t.Sentiment_Id);
             
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Sentiments", "TextAnalysis_Id", "dbo.TextAnalysis");
-            DropIndex("dbo.Sentiments", new[] { "TextAnalysis_Id" });
-            DropTable("dbo.Sentiments");
+            DropForeignKey("dbo.TextAnalysisSentiments", "Sentiment_Id", "dbo.Sentiments");
+            DropForeignKey("dbo.TextAnalysisSentiments", "TextAnalysis_Id", "dbo.TextAnalysis");
+            DropIndex("dbo.TextAnalysisSentiments", new[] { "Sentiment_Id" });
+            DropIndex("dbo.TextAnalysisSentiments", new[] { "TextAnalysis_Id" });
+            DropTable("dbo.TextAnalysisSentiments");
             DropTable("dbo.TextAnalysis");
+            DropTable("dbo.Sentiments");
         }
     }
 }

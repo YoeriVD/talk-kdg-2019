@@ -229,7 +229,7 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <None Include="T4MVC.tt.hooks.t4" />
     <Content Include="Views\Sentiment\Index.cshtml" />
-    <Content Include="Views\Home\DisplayTemplates\TextCard.cshtml" />
+    <Content Include="Views\Home\DisplayTemplates\TextAnalysis.cshtml" />
     <Content Include="Views\Home\DisplayTemplates\Sentiment.cshtml" />
   </ItemGroup>
   <ItemGroup>

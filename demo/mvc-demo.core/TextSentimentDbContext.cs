@@ -8,9 +8,11 @@ namespace mvc_demo.core
     public class TextSentimentDbContext : DbContext
     {
         public IDbSet<TextAnalysis> TextAnalyses { get; set; }
-        public IDbSet<Sentiment> TextSentimentses { get; set; }
+        public IDbSet<Sentiment> Sentiments { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<TextAnalysis>().HasMany(m => m.Sentiments).WithMany(m => m.Texts);
+            base.OnModelCreating(modelBuilder);
         }
     }
 

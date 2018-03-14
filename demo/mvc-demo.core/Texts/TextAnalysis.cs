@@ -9,6 +9,7 @@ namespace mvc_demo.core.Texts
         public TextAnalysis()
         {
             Id = Guid.NewGuid();
+            Sentiments = new HashSet<Sentiment>();
         }
 
         public string Title { get; set; }
