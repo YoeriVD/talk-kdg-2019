@@ -114,7 +114,7 @@ namespace mvc_demo.Controllers
             public partial class _DisplayTemplatesClass
             {
                 public readonly string Sentiment = "Sentiment";
-                public readonly string TextCard = "TextCard";
+                public readonly string TextAnalysis = "TextAnalysis";
             }
         }
     }
