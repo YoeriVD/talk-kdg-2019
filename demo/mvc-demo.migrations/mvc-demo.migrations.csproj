@@ -48,6 +48,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Migrations\201803142112097_InitialMigration.cs" />
+    <Compile Include="Migrations\201803142112097_InitialMigration.Designer.cs">
+      <DependentUpon>201803142112097_InitialMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -60,6 +64,11 @@
       <Project>{3f6f3a71-d635-4196-8ae6-2e607d9bc663}</Project>
       <Name>mvc-demo.core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201803142112097_InitialMigration.resx">
+      <DependentUpon>201803142112097_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

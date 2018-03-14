@@ -23,7 +23,7 @@ using System.Web.Mvc.Ajax;
 using System.Web.Mvc.Html;
 using System.Web.Routing;
 using T4MVC;
-namespace mvc_demo.Models
+namespace mvc_demo.Controllers
 {
     public partial class SentimentController
     {
@@ -102,7 +102,7 @@ namespace mvc_demo.Models
     }
 
     [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-    public partial class T4MVC_SentimentController : mvc_demo.Models.SentimentController
+    public partial class T4MVC_SentimentController : mvc_demo.Controllers.SentimentController
     {
         public T4MVC_SentimentController() : base(Dummy.Instance) { }
 

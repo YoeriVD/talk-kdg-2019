@@ -47,6 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Sentiments\EmotionKind.cs" />
+    <Compile Include="Sentiments\Sentiment.cs" />
+    <Compile Include="Texts\TextAnalysis.cs" />
     <Compile Include="TextSentimentDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
