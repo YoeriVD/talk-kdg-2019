@@ -1,0 +1,21 @@
+﻿@using mvc_demo.Models
+@model mvc_demo.Models.Sentiment
+<span class="badge badge-pill badge-@emotionToPillColor(Model.EmotionKind)">@Model.EmotionName</span>
+
+@functions
+{
+
+    string emotionToPillColor(EmotionKind emotion)
+    {
+        switch (emotion)
+        {
+            case EmotionKind.Positive:
+                return "success";
+            case EmotionKind.Negative:
+                return "danger";
+            default:
+                return "info";
+        }
+    }
+
+}

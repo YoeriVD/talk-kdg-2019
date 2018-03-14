@@ -11,29 +11,5 @@
     .card-body > .card-text:after { content: '...' }
 </style>
 <div class="d-flex justify-content-around flex-wrap">
-    @foreach (var textCard in Model.TextCards)
-    {
-        <div class="card m-2" style="width: 20rem">
-            <div class="card-header d-flex justify-content-between">
-                <h5 class="card-title">
-                    @textCard.Title
-                </h5>
-                <div>
-                    @foreach (var sentiment in textCard.Sentiments)
-                    {
-                        <span class="badge badge-pill badge-info">@sentiment</span>
-                    }
-                </div>
-            </div>
-            <div class="card-body" style="">
-                <p class="card-text">
-                    @textCard.Preview.Substring(0, 140)
-                </p>
-                <div class="d-flex flex-row-reverse">
-                    @Html.ActionLink("Read", MVC.Sentiment.Index(), new {@class = "card-link"})
-                </div>
-            </div>
-
-        </div>
-    }
+    @Html.DisplayFor(m => m.TextCards)
 </div>
