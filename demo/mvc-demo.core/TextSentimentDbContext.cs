@@ -9,6 +9,9 @@ namespace mvc_demo.core
     {
         public IDbSet<TextAnalysis> TextAnalyses { get; set; }
         public IDbSet<Sentiment> TextSentimentses { get; set; }
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+        }
     }
 
     public interface IEntity

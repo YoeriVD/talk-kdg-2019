@@ -13,7 +13,7 @@ namespace mvc_demo.core.Texts
 
         public string Title { get; set; }
         public string Preview { get; set; }
-        public List<Sentiment> Sentiments { get; set; }
+        public virtual ICollection<Sentiment> Sentiments { get; set; }
         public Guid Id { get; set; }
     }
 }
