@@ -1,31 +1,39 @@
-﻿@{
+﻿@model mvc_demo.Models.HomeIndexViewModel
+@{
     ViewBag.Title = "Home Page";
 }
+<style>
+    .card-body > .card-text {
+        height: 8rem;
+        overflow: hidden;
+    }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+    .card-body > .card-text:after { content: '...' }
+</style>
+<div class="d-flex justify-content-around flex-wrap">
+    @foreach (var textCard in Model.TextCards)
+    {
+        <div class="card m-2" style="width: 20rem">
+            <div class="card-header d-flex justify-content-between">
+                <h5 class="card-title">
+                    @textCard.Title
+                </h5>
+                <div>
+                    @foreach (var sentiment in textCard.Sentiments)
+                    {
+                        <span class="badge badge-pill badge-info">@sentiment</span>
+                    }
+                </div>
+            </div>
+            <div class="card-body" style="">
+                <p class="card-text">
+                    @textCard.Preview.Substring(0, 140)
+                </p>
+                <div class="d-flex flex-row-reverse">
+                    @Html.ActionLink("Read", MVC.Sentiment.Index(), new {@class = "card-link"})
+                </div>
+            </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
+        </div>
+    }
 </div>
