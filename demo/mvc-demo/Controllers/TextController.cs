@@ -8,16 +8,16 @@ using mvc_demo.core.Texts;
 
 namespace mvc_demo.Controllers
 {
-    public class TextController : Controller
+    public partial class TextController : Controller
     {
         // GET: Text
-        public ActionResult Index()
+        public virtual ActionResult Index()
         {
             var model = new AddTextModel();
             return View(model);
         }
         [HttpPost]
-        public ActionResult Index(AddTextModel model)
+        public virtual ActionResult Index(AddTextModel model)
         {
             using (var db = new TextSentimentDbContext())
             {
