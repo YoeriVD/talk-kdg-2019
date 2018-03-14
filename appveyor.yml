@@ -1,0 +1,16 @@
+version: 1.0.{build}
+os: Visual Studio 2017
+before_build:
+  - nuget restore
+build:
+  project: demo\mvc-demo.sln
+  publish_nuget: false
+  verbosity: minimal
+max_jobs: 1
+skip_tags: true
+cache:
+  - packages -> **\packages.config  # preserve "packages" directory in the root of build folder but will reset it if packages.config is modified
+  - node_modules   # NuGet < v3
+  - '%LocalAppData%\NuGet\v3-cache' # NuGet v3
+services:
+  - mssql2016
