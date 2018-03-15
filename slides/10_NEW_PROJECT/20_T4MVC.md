@@ -1,3 +1,5 @@
+# T4MVC
+--
 ## T4MVC 
 ### weg met "magic strings"!
 
@@ -18,3 +20,6 @@
     <li>@Html.ActionLink("Contact", MVC.Home.Contact())</li>
 </ul>
 ```
+
+--
+ # voordeel?

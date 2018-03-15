@@ -9,4 +9,3 @@
 
 let op: template gebruikt standaard bootstrap 3! Na de upgrade -> bootstrap 4
 [https://getbootstrap.com/docs/4.0/migration/](https://getbootstrap.com/docs/4.0/migration/)
---

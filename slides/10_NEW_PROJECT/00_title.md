@@ -1,4 +1,4 @@
-### MVC getting started
+### Getting started
 
 
 
