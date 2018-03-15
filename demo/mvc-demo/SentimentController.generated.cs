@@ -98,8 +98,7 @@ namespace mvc_demo.Controllers
         public class ActionParamsClass_Index
         {
             public readonly string id = "id";
-            public readonly string Id = "Id";
-            public readonly string selectedSentiments = "selectedSentiments";
+            public readonly string viewModel = "viewModel";
         }
         static readonly ViewsClass s_views = new ViewsClass();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -135,15 +134,14 @@ namespace mvc_demo.Controllers
         }
 
         [NonAction]
-        partial void IndexOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, System.Guid Id, System.Guid[] selectedSentiments);
+        partial void IndexOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, mvc_demo.Models.IndexSentimentViewModel viewModel);
 
         [NonAction]
-        public override System.Web.Mvc.ActionResult Index(System.Guid Id, System.Guid[] selectedSentiments)
+        public override System.Web.Mvc.ActionResult Index(mvc_demo.Models.IndexSentimentViewModel viewModel)
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Index);
-            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "Id", Id);
-            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "selectedSentiments", selectedSentiments);
-            IndexOverride(callInfo, Id, selectedSentiments);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "viewModel", viewModel);
+            IndexOverride(callInfo, viewModel);
             return callInfo;
         }
 

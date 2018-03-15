@@ -32,16 +32,16 @@ namespace mvc_demo.Controllers
             }
         }
         [HttpPost]
-        public virtual ActionResult Index(Guid Id, Guid[] selectedSentiments)
+        public virtual ActionResult Index(IndexSentimentViewModel viewModel)
         {
             using (var db = new TextSentimentDbContext())
             {
-                var text = db.TextAnalyses.Include(d => d.Sentiments).FirstOrDefault(t => t.Id == Id);
+                var text = db.TextAnalyses.Include(d => d.Sentiments).FirstOrDefault(t => t.Id == viewModel.Id);
                 if (text != null)
                 {
                     text.Sentiments.Clear();
                     var sentiments = db.Sentiments.ToDictionary(s => s.Id);
-                    foreach (var sentimentIds in selectedSentiments)
+                    foreach (var sentimentIds in viewModel.SelectedSentiments.SelectedOptions)
                     {
                         text.Sentiments.Add(sentiments[sentimentIds]);
                     }

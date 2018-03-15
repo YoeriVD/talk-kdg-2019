@@ -1,21 +1,21 @@
 ﻿@model mvc_demo.core.Texts.TextAnalysis
 
-<div class="card m-2" style="width: 20rem">
-    <div class="card-header d-flex justify-content-between">
+<div class="card m-2 w-25">
+    <header class="card-header d-flex justify-content-between">
         <h5 class="card-title">
             @Model.Title
         </h5>
-        <div>
+        <aside>
             @Html.DisplayFor(m => m.Sentiments)
-        </div>
-    </div>
-    <div class="card-body" style="">
+        </aside>
+    </header>
+    <article class="card-body">
         <p class="card-text">
             @(Model.TextContent?.Substring(0, 140))
         </p>
-        <div class="d-flex flex-row-reverse">
-            @Html.ActionLink("Read", MVC.Sentiment.Index(Model.Id), new {@class = "card-link"})
-        </div>
-    </div>
-
+    </article>
+    
+    <footer class="card-footer bg-white text-right">
+        @Html.ActionLink("Read", MVC.Sentiment.Index(Model.Id), new {@class = "btn btn-outline-primary"})
+    </footer>
 </div>
