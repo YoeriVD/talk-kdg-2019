@@ -14,4 +14,5 @@
 |-------|------|
 | merge | wijzigingen van een andere branch ook op de huidige branch toepassen |
 | rebase | alternatief voor merge, negeren tot later :-) |
+| upstream | de naam van de branch op de remote die getracked mag worden |
 | pull request | wanneer je niet zelf een branch mag wijzigen, kan je een aanvraag doen naar iemand die het wel mag |
