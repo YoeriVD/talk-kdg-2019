@@ -25,13 +25,13 @@ using System.Web.Routing;
 using T4MVC;
 namespace mvc_demo.Controllers
 {
-    public partial class SentimentController
+    public partial class TextController
     {
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public SentimentController() { }
+        public TextController() { }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        protected SentimentController(Dummy d) { }
+        protected TextController(Dummy d) { }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         protected RedirectToRouteResult RedirectToAction(ActionResult result)
@@ -59,21 +59,15 @@ namespace mvc_demo.Controllers
             return RedirectToActionPermanent(taskResult.Result);
         }
 
-        [NonAction]
-        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public virtual System.Web.Mvc.ActionResult Index()
-        {
-            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Index);
-        }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public SentimentController Actions { get { return MVC.Sentiment; } }
+        public TextController Actions { get { return MVC.Text; } }
         [GeneratedCode("T4MVC", "2.0")]
         public readonly string Area = "";
         [GeneratedCode("T4MVC", "2.0")]
-        public readonly string Name = "Sentiment";
+        public readonly string Name = "Text";
         [GeneratedCode("T4MVC", "2.0")]
-        public const string NameConst = "Sentiment";
+        public const string NameConst = "Text";
         [GeneratedCode("T4MVC", "2.0")]
         static readonly ActionNamesClass s_actions = new ActionNamesClass();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -97,8 +91,7 @@ namespace mvc_demo.Controllers
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionParamsClass_Index
         {
-            public readonly string id = "id";
-            public readonly string viewModel = "viewModel";
+            public readonly string model = "model";
         }
         static readonly ViewsClass s_views = new ViewsClass();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -112,36 +105,35 @@ namespace mvc_demo.Controllers
             {
                 public readonly string Index = "Index";
             }
-            public readonly string Index = "~/Views/Sentiment/Index.cshtml";
+            public readonly string Index = "~/Views/Text/Index.cshtml";
         }
     }
 
     [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-    public partial class T4MVC_SentimentController : mvc_demo.Controllers.SentimentController
+    public partial class T4MVC_TextController : mvc_demo.Controllers.TextController
     {
-        public T4MVC_SentimentController() : base(Dummy.Instance) { }
+        public T4MVC_TextController() : base(Dummy.Instance) { }
 
         [NonAction]
-        partial void IndexOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, System.Guid id);
+        partial void IndexOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
 
         [NonAction]
-        public override System.Web.Mvc.ActionResult Index(System.Guid id)
+        public override System.Web.Mvc.ActionResult Index()
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Index);
-            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "id", id);
-            IndexOverride(callInfo, id);
+            IndexOverride(callInfo);
             return callInfo;
         }
 
         [NonAction]
-        partial void IndexOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, mvc_demo.Models.IndexSentimentViewModel viewModel);
+        partial void IndexOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, mvc_demo.Controllers.AddTextModel model);
 
         [NonAction]
-        public override System.Web.Mvc.ActionResult Index(mvc_demo.Models.IndexSentimentViewModel viewModel)
+        public override System.Web.Mvc.ActionResult Index(mvc_demo.Controllers.AddTextModel model)
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Index);
-            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "viewModel", viewModel);
-            IndexOverride(callInfo, viewModel);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "model", model);
+            IndexOverride(callInfo, model);
             return callInfo;
         }
 

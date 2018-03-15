@@ -123,6 +123,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TextController.cs" />
     <Compile Include="Models\IndexSentimentViewModel.cs" />
     <Compile Include="Models\MultiSelectFormDto.cs" />
     <Compile Include="Models\Option.cs" />
@@ -144,6 +145,9 @@
     <Compile Include="T4MVC.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TextController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -235,6 +239,7 @@
     <Content Include="Views\Home\DisplayTemplates\TextAnalysis.cshtml" />
     <Content Include="Views\Home\DisplayTemplates\Sentiment.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\MultiSelectFormDto.cshtml" />
+    <Content Include="Views\Text\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

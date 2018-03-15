@@ -20,12 +20,15 @@
                 @Html.ActionLink("Home", MVC.Home.Index(), new {@class="nav-link"})
             </li>
             <li class="nav-item">
+                @Html.ActionLink("Add text", MVC.Text.Index(), new {@class="nav-link"})
+            </li>
+            <li class="nav-item">
                 @Html.ActionLink("About", MVC.Home.About(), new {@class="nav-link"})
             </li>
         </ul>
     </div>
 </nav>
-    <div class="container body-content">
+    <div class="body-content">
         @RenderBody()
         <hr />
         <footer>
