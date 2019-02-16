@@ -1,8 +1,0 @@
-﻿@model mvc_demo.Models.MultiSelectFormDto
-
-<select class="form-control custom-select col-12" multiple="multiple" id="@(Html.IdForModel()).SelectedOptions" name="@(Html.NameForModel()).SelectedOptions" size="12">
-    @foreach (var availableOption in Model.AvailableOptions)
-    {
-        <option value="@availableOption.Id" @(availableOption.IsSelected ? "selected" : "")>@availableOption.Description</option>
-    }
-</select>

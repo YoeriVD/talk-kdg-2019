@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/YoeriVD/talk-kdg-2018#readme",
   "devDependencies": {
-    "@infosupport/kc-cli": "^2.3.6"
+    "@infosupport/kc-cli": "^2.3.8"
   }
 }
