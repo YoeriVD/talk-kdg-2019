@@ -7,8 +7,11 @@
       "library": "twitter-bootstrap@4.3.1",
       "destination": "wwwroot/lib/bootstrap/",
       "files": [
-        "js/bootstrap.min.js",
+        "js/bootstrap.bundle.js",
+        "js/bootstrap.bundle.js.map",
+        "js/bootstrap.bundle.min.js",
         "css/bootstrap-grid.min.css",
+        "css/bootstrap.css",
         "css/bootstrap.min.css",
         "css/bootstrap-reboot.min.css"
       ]
@@ -18,6 +21,7 @@
       "library": "jquery@3.3.1",
       "destination": "wwwroot/lib/jquery/",
       "files": [
+        "jquery.js",
         "jquery.min.js"
       ]
     },
