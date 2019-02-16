@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run kc -- serve -o",
+    "kc": "node ./node_modules/@infosupport/kc-cli/bin/kc",
     "print": "kc printnew --url http://localhost:3000 --output slides.pdf"
   },
   "repository": {

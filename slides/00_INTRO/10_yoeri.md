@@ -10,14 +10,14 @@ everything web - git - CI/CD - javascript - C#
 
 --
 
-<!-- .slide: data-background="./img/sd.jpg" -->
+<!-- .slide: data-background="./img/dematic.jpg" -->
 
 --
 
 <!-- .slide: data-background="./img/kdg.jpg" -->
 <!-- .slide: data-background-size="100% 100%" -->
 <!-- .slide: style="color:white" -->
-<!-- .element: class="fragment" -->bijna 6 jaar geleden!
+<!-- .element: class="fragment" -->bijna 7 jaar geleden!
 
 --
 
@@ -27,10 +27,11 @@ everything web - git - CI/CD - javascript - C#
 
 --
 
-<!-- .slide: data-background="./img/spotify.png" -->
---
+## <!-- .slide: data-background="./img/spotify.png" -->
+
 <!-- .slide: data-background="./img/roeland.jpg" -->
 <!-- .slide: style="color:white; font-size:55" -->
-### Roeland taalkampen
-<!-- .element: class="fragment" -->"kleine" mannen
 
+### Roeland taalkampen
+
+<!-- .element: class="fragment" -->"kleine" mannen
