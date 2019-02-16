@@ -1,11 +1,9 @@
 ### New project
 
-* file -> new project
-* MVC
-* Geen unit tests (zelf later toevoegen)
---
+- file -> new project
+- MVC
+- Geen unit tests (zelf later toevoegen)
 
-## UPDATE ALL NUGET PACKAGES!
+## Update NuGet packages
 
-let op: template gebruikt standaard bootstrap 3! Na de upgrade -> bootstrap 4
-[https://getbootstrap.com/docs/4.0/migration/](https://getbootstrap.com/docs/4.0/migration/)
+- dotnet core templates kunnen achterlopen
