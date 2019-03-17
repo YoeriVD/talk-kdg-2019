@@ -9,12 +9,6 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
-    <PackageReference Include="Microsoft.Web.LibraryManager.Build" Version="1.0.172" />
-    <PackageReference Include="R4Mvc" Version="1.0.0-alpha2-00333" />
-    <PackageReference Include="R4Mvc.Tools" Version="1.0.0-alpha2-00333">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
-    </PackageReference>
   </ItemGroup>
 
 </Project>
