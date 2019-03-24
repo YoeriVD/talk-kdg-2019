@@ -13,4 +13,4 @@
 ### pull request
 
 1. complete zorgt voor een merge op de server
-1. life saving tip #3: delete source branch!
+1. life saving tip #4: delete source branch!

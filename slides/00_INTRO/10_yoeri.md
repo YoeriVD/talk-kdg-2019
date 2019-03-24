@@ -10,10 +10,6 @@ everything web - git - CI/CD - javascript - C#
 
 --
 
-<!-- .slide: data-background="./img/dematic.jpg" -->
-
---
-
 <!-- .slide: data-background="./img/kdg.jpg" -->
 <!-- .slide: data-background-size="100% 100%" -->
 <!-- .slide: style="color:white" -->
