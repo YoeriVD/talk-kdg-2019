@@ -1,6 +1,5 @@
-## Inhoud
+## Contents
 
-* Hoe begin ik aan een project?
-* Git? Pull request? Branches? REBASE? MERGE??
-* Hidden gems of Razor
-* Migrations
+- MVC Hidden gems!
+- Git? Pull request? Branches? REBASE? MERGE??
+- Build your own Dependency Injection Container!
