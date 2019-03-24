@@ -1,0 +1,13 @@
+﻿@model QuestionViewModel
+<section class="question">
+    <h1>
+        @Model.Question
+    </h1>
+</section>
+<form asp-action="Answer" method="post" asp-route-id="@Model.QuestionId">
+    <section class="voting-buttons d-flex align-items-center justify-content-around">
+
+        @Html.EditorFor(m => m.Answers)
+
+    </section>
+</form>

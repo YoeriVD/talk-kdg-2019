@@ -1,13 +1,10 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model QuestionViewModel;
+
+@if (Model.IsAnswered)
+{
+    @Html.DisplayForModel()
 }
-<section class="question">
-    Alle wegversmallingen vervangen door bloembakken?
-</section>
-<section class="voting-buttons d-flex align-items-center justify-content-around">
-    <button class="border bg-success border-success rounded-circle">Ja</button>
-    <button class="border bg-danger border-danger rounded-circle">Nee</button>
-</section>
-
-
-
+else
+{
+    @Html.EditorForModel()
+}

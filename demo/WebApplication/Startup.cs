@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.Sqlite;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using WebApplication.Core;
 
 namespace WebApplication
 {
@@ -33,6 +31,21 @@ namespace WebApplication
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddSingleton(c =>
+            {
+                var connection = new SqliteConnection("DataSource=:memory:");
+                connection.Open();
+                return connection;
+            });
+            services.AddScoped(c =>
+            {
+                var options = new DbContextOptionsBuilder<VotingContext>()
+                    .UseSqlite(c.GetService<SqliteConnection>())
+                    .Options;
+                var votingContext = new VotingContext(options);
+                votingContext.Database.EnsureCreated();
+                return votingContext;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -56,8 +69,8 @@ namespace WebApplication
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    "default",
+                    "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
