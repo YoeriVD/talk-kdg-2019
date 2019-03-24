@@ -1,7 +1,7 @@
 {
   "iisSettings": {
     "windowsAuthentication": true,
-    "anonymousAuthentication": true,
+    "anonymousAuthentication": false,
     "iis": {
       "applicationUrl": "https://localhost/WebApplication",
       "sslPort": 0
