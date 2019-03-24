@@ -1,3 +1,1 @@
-## Razor full power
-
-### onze eerste feature
+## Display Templates
