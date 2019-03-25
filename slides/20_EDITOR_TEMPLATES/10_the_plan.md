@@ -1,7 +1,6 @@
 ### the plan
 
-1. maak een feature branch
-1. `git push --set-upstream origin <branch>`
+1. toon demo
 1. pas de code aan
 1. test
-1. merge branch
+1. git all the things!
